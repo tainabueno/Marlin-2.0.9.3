@@ -823,7 +823,7 @@
 //#define USE_KMAX_PLUG
 
 // Enable pullup for all endstops to prevent a floating state
-//#define ENDSTOPPULLUPS
+#define ENDSTOPPULLUPS
 #if DISABLED(ENDSTOPPULLUPS)
 // Disable ENDSTOPPULLUPS to set pullups individually
 //#define ENDSTOPPULLUP_XMIN
@@ -838,7 +838,7 @@
 //#define ENDSTOPPULLUP_IMAX
 //#define ENDSTOPPULLUP_JMAX
 //#define ENDSTOPPULLUP_KMAX
-#define ENDSTOPPULLUP_ZMIN_PROBE
+//#define ENDSTOPPULLUP_ZMIN_PROBE
 #endif
 
 // Enable pulldown for all endstops to prevent a floating state
