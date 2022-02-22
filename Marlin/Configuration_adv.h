@@ -882,7 +882,7 @@
 
 // Safety: The probe needs time to recognize the command.
 //         Minimum command delay (ms). Enable and increase if needed.
-#define BLTOUCH_DELAY 500
+#define BLTOUCH_DELAY 200
 
 /**
  * Settings for BLTOUCH Classic 1.2, 1.3 or BLTouch Smart 1.0, 2.0, 2.2, 3.0, 3.1, and most clones:
@@ -1495,7 +1495,7 @@
  * an option on the LCD screen to continue the print from the last-known
  * point in the file.
  */
-//#define POWER_LOSS_RECOVERY
+#define POWER_LOSS_RECOVERY
 #if ENABLED(POWER_LOSS_RECOVERY)
 #define PLR_ENABLED_DEFAULT false // Power Loss Recovery enabled by default. (Set with 'M413 Sn' & M500)
 //#define BACKUP_POWER_SUPPLY       // Backup power / UPS to move the steppers on power loss
@@ -1664,7 +1664,7 @@
  *
  * :[ 'LCD', 'ONBOARD', 'CUSTOM_CABLE' ]
  */
-//#define SDCARD_CONNECTION LCD
+#define SDCARD_CONNECTION LCD
 
 // Enable if SD detect is rendered useless (e.g., by using an SD extender)
 //#define NO_SD_DETECT
@@ -1983,7 +1983,7 @@
 #define BABYSTEPPING
 #if ENABLED(BABYSTEPPING)
 //#define INTEGRATED_BABYSTEPPING         // EXPERIMENTAL integration of babystepping into the Stepper ISR
-//#define BABYSTEP_WITHOUT_HOMING
+#define BABYSTEP_WITHOUT_HOMING
 #define BABYSTEP_ALWAYS_AVAILABLE // Allow babystepping at all times (not just during movement).
 //#define BABYSTEP_XY                     // Also enable X/Y Babystepping. Not supported on DELTA!
 #define BABYSTEP_INVERT_Z false // Change if Z babysteps should go the other way
@@ -2093,9 +2093,9 @@
  * Repeatedly attempt G29 leveling until it succeeds.
  * Stop after G29_MAX_RETRIES attempts.
  */
-//#define G29_RETRY_AND_RECOVER
+#define G29_RETRY_AND_RECOVER
 #if ENABLED(G29_RETRY_AND_RECOVER)
-#define G29_MAX_RETRIES 3
+#define G29_MAX_RETRIES 4
 #define G29_HALT_ON_FAILURE
 /**
  * Specify the GCODE commands that will be executed when leveling succeeds,

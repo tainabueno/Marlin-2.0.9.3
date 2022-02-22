@@ -71,7 +71,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "(Taina Bueno 18-02-2022 SKR 1.4)" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "(Taina Bueno 22-02-2022 SKR 1.4)" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -138,7 +138,7 @@
  * Currently only supported for AVR, DUE, LPC1768/9 and STM32/STM32F1
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-//#define SERIAL_PORT_3 3
+#define SERIAL_PORT_3 3
 //#define BAUDRATE_3 250000   // Enable to override BAUDRATE
 
 // Enable the Bluetooth serial interface on AT90USB devices
@@ -823,7 +823,7 @@
 //#define USE_KMAX_PLUG
 
 // Enable pullup for all endstops to prevent a floating state
-#define ENDSTOPPULLUPS
+//#define ENDSTOPPULLUPS
 #if DISABLED(ENDSTOPPULLUPS)
 // Disable ENDSTOPPULLUPS to set pullups individually
 //#define ENDSTOPPULLUP_XMIN
@@ -838,7 +838,7 @@
 //#define ENDSTOPPULLUP_IMAX
 //#define ENDSTOPPULLUP_JMAX
 //#define ENDSTOPPULLUP_KMAX
-//#define ENDSTOPPULLUP_ZMIN_PROBE
+#define ENDSTOPPULLUP_ZMIN_PROBE
 #endif
 
 // Enable pulldown for all endstops to prevent a floating state
@@ -1094,7 +1094,7 @@
  *      - normally-closed switches to GND and D32.
  *      - normally-open switches to 5V and D32.
  */
-//#define Z_MIN_PROBE_PIN 32 // Pin 32 is the RAMPS default
+#define Z_MIN_PROBE_PIN P0_10 // Pin 32 is the RAMPS default
 
 /**
  * Probe Type
